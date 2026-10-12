@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Keskustelupalsta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="logo.svg" alt="Logo"></a>
+    <nav>
+      <a href="index.html">Etusivu</a>
+      <a href="springfield.html">Springfield</a>
+      <a href="characters.html">Hahmot</a>
+      <a href="forum.html">Keskustelupalsta</a>
+    </nav>
+  </header>
+
+  <main>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <h2>Viestit</h2>
+      <button class="btn-primary" onclick="document.getElementById('post-dialog').showModal()">Luo viesti</button>
+    </div>
+
+    <div id="forum-posts"></div>
+  </main>
+
+  <dialog id="post-dialog">
+    <form onsubmit="handlePostSubmit(event)">
+      <h3>Uusi viesti</h3>
+      <label>Nimi:</label>
+      <input type="text" id="author" required>
+      <label>Otsikko:</label>
+      <input type="text" id="title" required>
+      <label>Viesti:</label>
+      <textarea id="content" rows="3" required></textarea>
+      <div style="display: flex; gap: 8px; margin-top: 10px;">
+        <button type="submit" class="btn-primary">Lähetä</button>
+        <button type="button" class="btn-primary" style="background-color: var(--black);" onclick="document.getElementById('post-dialog').close()">Peruuta</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer><p>&copy; 2026 Simpsons</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

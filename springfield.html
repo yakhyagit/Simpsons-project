@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Springfield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="logo.svg" alt="Logo"></a>
+    <nav>
+      <a href="index.html">Etusivu</a>
+      <a href="springfield.html">Springfield</a>
+      <a href="characters.html">Hahmot</a>
+      <a href="forum.html">Keskustelupalsta</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Springfield</h2>
+    <p>Kuvitteellinen kaupunki, jossa tarinat tapahtuvat.</p>
+
+    <div class="grid">
+      <div class="card" onclick="openGallery('Simpsonien koti')">
+        <img src="https://placehold.co/300x200/FCCB00/000000?text=Koti" alt="Home">
+        <h3>Simpsonien koti</h3>
+      </div>
+      <div class="card" onclick="openGallery('Moe\'s Tavern')">
+        <img src="https://placehold.co/300x200/1769B6/FFFFFF?text=Moe's" alt="Moes">
+        <h3>Moe's</h3>
+      </div>
+      <div class="card" onclick="openGallery('Kwik-E-Mart')">
+        <img src="https://placehold.co/300x200/E44423/FFFFFF?text=Kwik-E-Mart" alt="Kwik">
+        <h3>Kwik'e'mart</h3>
+      </div>
+    </div>
+
+    <section id="gallery-section" style="display: none; margin-top: 25px;">
+      <h3 id="gallery-title">Galleria</h3>
+      <div class="grid" id="gallery-images"></div>
+    </section>
+  </main>
+
+  <div id="image-modal" class="modal-img" onclick="closeModal()">
+    <img id="modal-src" src="" alt="Modal">
+  </div>
+
+  <footer><p>&copy; 2026 Simpsons</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>

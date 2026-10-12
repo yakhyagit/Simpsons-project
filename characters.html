@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hahmot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="logo.svg" alt="Logo"></a>
+    <nav>
+      <a href="index.html">Etusivu</a>
+      <a href="springfield.html">Springfield</a>
+      <a href="characters.html">Hahmot</a>
+      <a href="forum.html">Keskustelupalsta</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Hahmot</h2>
+    <div class="grid" id="character-list">
+      <div class="card" onclick="selectCharacter('Homer')"><h3>Homer</h3></div>
+      <div class="card" onclick="selectCharacter('Marge')"><h3>Marge</h3></div>
+      <div class="card" onclick="selectCharacter('Bart')"><h3>Bart</h3></div>
+      <div class="card" onclick="selectCharacter('Lisa')"><h3>Lisa</h3></div>
+      <div class="card" onclick="selectCharacter('Maggie')"><h3>Maggie</h3></div>
+      <div class="card" onclick="selectCharacter('Burns')"><h3>Burns</h3></div>
+      <div class="card" onclick="selectCharacter('Apu')"><h3>Apu</h3></div>
+      <div class="card" onclick="selectCharacter('Moe')"><h3>Moe</h3></div>
+    </div>
+
+    <section id="character-detail" style="display: none; margin-top: 25px;">
+      <h2 id="char-name">Nimi</h2>
+      <div class="tabs" style="margin-top: 10px;">
+        <button class="tab-btn active" onclick="switchTab('info')">Info</button>
+        <button class="tab-btn" onclick="switchTab('memes')">Meemit</button>
+      </div>
+
+      <div id="tab-info" class="tab-content active box">
+        <p id="char-desc">Kuvaus...</p>
+        <p id="actor-info" style="margin-top: 10px;">Ääninäyttelijä...</p>
+      </div>
+
+      <div id="tab-memes" class="tab-content">
+        <div class="grid" id="meme-gallery"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="image-modal" class="modal-img" onclick="closeModal()">
+    <img id="modal-src" src="" alt="Modal">
+  </div>
+
+  <footer><p>&copy; 2026 Simpsons</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
